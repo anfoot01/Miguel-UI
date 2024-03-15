@@ -1,0 +1,58 @@
+.hero {
+  margin-top: 64rem;
+  margin-bottom: 128rem;
+  display: flex;
+  align-items: center;
+  gap: 140rem;
+  @include desctop-small {
+    gap: 30rem;
+  }
+  @include tablet {
+    flex-direction: column;
+  }
+  &__img {
+    border-radius: 8rem;
+    max-width: 448rem;
+    flex-shrink: 0;
+    img {
+      border-radius: inherit;
+    }
+  }
+  &__img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s all ease-in-out;
+  }
+  &__info {
+    font-size: 16rem;
+  }
+
+  &__title {
+    margin-bottom: 24rem;
+    font-weight: 700;
+    font-size: 60rem;
+    line-height: 118%;
+    letter-spacing: -0.01em;
+  }
+  
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 175%;
+    letter-spacing: 0.03em;
+    color: var(--blanco);
+
+    .span {
+      font-weight: 500;
+      font-size: 16rem;
+      line-height: 125%;
+      letter-spacing: 0.01em;
+    }
+  }
+  
+  &__email {
+    @extend .hero__desc;
+    color: var(--primario);
+  }
+}
